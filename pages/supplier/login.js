@@ -52,7 +52,7 @@ export default function DeliverymanSignIn() {
                             <tbody className=' gap-5'>
                                 <tr>
                                     <td colSpan="2">
-                                        <h1 className='font-bold text-black text-xl'>Deliveryman Login</h1>
+                                        <h1 className='font-bold text-black text-xl'>Supplier Login</h1>
                                         {error && <p className="text-red-500">{error}</p>}
                                     </td>
                                 </tr>

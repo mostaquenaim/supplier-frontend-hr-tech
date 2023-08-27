@@ -77,6 +77,46 @@ function Drawer(props) {
                         </li>
                         <li>
                             <a
+                                href="viewReturnedProducts"
+                                class="flex items-center p-2 text-gray-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-500"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                    <path d="M12 14v7m0-7L3 7l9-5 9 5-9 5z"></path>
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Return History</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                href="returnProduct"
+                                class="flex items-center p-2 text-gray-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-500"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                    <path d="M12 14v7m0-7L3 7l9-5 9 5-9 5z"></path>
+                                </svg>
+                                <span class="flex-1 ml-3 whitespace-nowrap">Return Product</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a
                                 href="productList"
                                 class="flex items-center p-2 text-gray-100 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                             >
