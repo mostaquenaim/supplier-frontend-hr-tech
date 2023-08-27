@@ -51,18 +51,24 @@ export default function Index() {
             <Drawer title="file upload" />
             <SessionCheck />
 
-            <section>
-                <p>{success}</p>
-                <div>
-                    <input type="file" name="filename" onChange={handleFileChange} />
+            <section className="bg-blue-200 min-h-full flex justify-center items-center text-black hover:text-white transition duration-300">
+                <div className="container mx-auto p-6 bg-white shadow-md hover:shadow-lg rounded-lg text-center">
+                    <p>{success}</p>
+                    <div className="my-4">
+                        <input
+                            type="file"
+                            name="filename"
+                            onChange={handleFileChange}
+                            className="border p-2 rounded focus:outline-none focus:border-blue-500"
+                        />
+                    </div>
+                    <button
+                        onClick={handleUpdate}
+                        className="btn bg-blue-400 text-black hover:text-white hover:bg-blue-600 transition duration-300"
+                    >
+                        Update
+                    </button>
                 </div>
-
-                <button
-                    onClick={handleUpdate}
-                    className="btn bg-blue-400 text-black hover:text-white"
-                >
-                    Update
-                </button>
             </section>
         </>
     );

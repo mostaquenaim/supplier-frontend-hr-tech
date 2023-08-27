@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import SessionCheck from '../components/sessionCheck';
 import Drawer from '../components/drawer'
 
-const DeliverymanProfile = () => {
+const UpdateProfile = () => {
 
     const {
         register,
@@ -30,7 +30,7 @@ const DeliverymanProfile = () => {
         const UserEmail = sessionStorage.getItem('email')
         setEmail(UserEmail)
 
-        const result = await axios.get('http://localhost:3000/suppliers/findUserByEmail', email);
+        const result = await axios.get(`http://localhost:3000/suppliers/findUserByEmail/${UserEmail}`);
 
         setUser(result.data);
     };
@@ -42,6 +42,7 @@ const DeliverymanProfile = () => {
 
     const handleUpdate = async () => {
         try {
+            updatedData.email = user.email
             console.log(updatedData)
             await axios.put(`http://localhost:3000/suppliers/update/${user.id}`, updatedData);
             setSuccess('Admin update successfully');
@@ -115,16 +116,7 @@ const DeliverymanProfile = () => {
                             className="border p-1 rounded focus:outline-none focus:border-blue-500"
                         />
                     </div>
-                    <div className="my-2">
-                        <label className="block">Email:</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value={user.email}
-                            onChange={handleInputChange}
-                            className="border p-1 rounded focus:outline-none focus:border-blue-500"
-                        />
-                    </div>
+      
                     <button
                         onClick={handleUpdate}
                         className="btn bg-blue-400 text-black hover:text-white"
@@ -140,7 +132,7 @@ const DeliverymanProfile = () => {
     );
 };
 
-export default DeliverymanProfile;
+export default UpdateProfile;
 
 // Rest of the code remains the same
 
